@@ -1,5 +1,18 @@
 # MinTIC Universidad El Bosque.
 
+(EN)
+
+* 3rd Cycle: Software Development
+  * Participate in a development team of 5 members to build a 3-tier WEB application deployed in a cloud (PaaS), using an agile approach
+  * Understand the software life cycle, including the deployment stage of a WEB application
+  * Understand the languages and protocols used in a WEB application (html, xml, http, CSS, etc.)
+  * Use the basic security mechanisms of a WEB application (authentication)
+  * Use code repositories (GitHub) and separate development and production environments.
+  * Understand the concept of REST API to decouple the front from the back of a WEB application
+  * Manage a cloud server to host a WEB application
+  * Understand the mechanics of working in an agile team, including the roles, responsibilities, and artifacts that are handled
+  * Use a relational database as part of a WEB application
+
 (ES)
 
 * Ciclo 3: Desarrollo de software
