@@ -6,6 +6,11 @@ th {
     background-color: bisque;
 }
 
+table {
+    margin-right: auto;
+    margin-left: auto;
+}
+
 #fin {
     text-align: center;
     color: darkblue;
