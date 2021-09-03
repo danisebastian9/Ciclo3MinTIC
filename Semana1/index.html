@@ -46,37 +46,82 @@
 
     <form action="">
         <div>
-            <div><label for="">Name</label>
-                <input type="text" placeholder=" Digite su nombre" required maxlength="10" pattern="" name="nombre"></div>
-            <div>
-                <label for="">Apellidos</label>
-                <input type="text" placeholder="Digite su apellido" name="apellido">
-            </div>
-            <div>
-                <label for="">Email</label>
-                <input type="email"placeholder="correo@email.com">
-            </div>
-            <div>
-                <label for="">Edad</label>
-                <input type="number"
-                min="1" max="120" step="1">
-            </div>
-            <div>
-                <label for="">Password</label>
-                <input type="password">
-            </div>
-            <div>
-                <label for="">Date</label>
-                <input type="date" min="1940-01-01" max="">
-            </div>
-            <div>
-                <label for="">Mes</label>
-                <input type="month">
-            </div>
-            <div>
-                <label for="">Semana</label>
-                <input type="week" >
-            </div>
+            <fieldset>
+                <div><label for="">Name</label>
+                    <input type="text" placeholder=" Digite su nombre" required maxlength="10" pattern="" name="nombre"></div>
+                <div>
+                    <label for="">Apellidos</label>
+                    <input type="text" placeholder="Digite su apellido" name="apellido">
+                </div>
+                <div>
+                    <label for="">Email</label>
+                    <input type="email"placeholder="correo@email.com">
+                </div>
+                <div>
+                    <label for="">Edad</label>
+                    <input type="number"
+                    min="1" max="120" step="1">
+                </div>
+                <div>
+                    <label for="">Password</label>
+                    <input type="password">
+                </div>
+            </fieldset>
+            <fieldset>
+                <div>
+                    <label for="">Date</label>
+                    <input type="date" min="1940-01-01" max="">
+                </div>
+                <div>
+                    <label for="">Mes</label>
+                    <input type="month">
+                </div>
+                <div>
+                    <label for="">Semana</label>
+                    <input type="week" >
+                </div>
+                <input type="color">
+            </fieldset>
+            <fieldset>
+                <div>
+                    <legend>Frutas</legend>
+                    <select name="lista" id="lista">
+                        <option value="0">Seleccione</option>
+                        <option value="1">Manzana</option>
+                        <option value="2">Guanabana</option>
+                        <option value="3">Fresa</option>
+                        <option value="4">Cereza</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="">Femenino</label>
+                    <input type="radio" name="genero">
+                    <label for="">Masculino</label>
+                    <input type="radio" name="genero">
+                    <label for="">Otro</label>
+                    <input type="radio" name="genero">
+                </div>
+                <div>
+                    <label for="">Hobbies:</label>
+                    <br>
+                    <input type="checkbox" name="hobbies">
+                    <label for="">Musica</label>
+                    <input type="checkbox" name="hobbies">
+                    <label for="">Baile</label>
+                    <input type="checkbox" name="hobbies">
+                    <label for="">Teatro</label>
+                    <input type="checkbox" name="hobbies">
+                    <label for="">Deporte</label>
+                    <input type="checkbox" name="hobbies">
+                    <label for="">Programar</label>
+                </div>
+                <div>
+                    <label for="">Foto</label>
+                    <input type="file" accept="image/*">
+                </div>
+            </fieldset>
+            <input type="reset">
+            <input type="button" value="Consultar">
             <input type="submit">
         </div>
 
