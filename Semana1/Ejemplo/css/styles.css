@@ -1,0 +1,7 @@
+.cont_header{
+    background-image: url('../recursos/header.jfif');
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+}
