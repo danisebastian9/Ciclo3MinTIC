@@ -1,4 +1,7 @@
 package com.sebastianproject.project01.Controlador;
 
-public class Controla {
+import javax.servlet.http.HttpServlet;
+
+public class Controla extends HttpServlet {
+    
 }
