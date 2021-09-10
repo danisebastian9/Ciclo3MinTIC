@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-    
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,5 +16,10 @@
         <div><label for="">Lado C: </label><input type="number" name="ladoC"></div>
         <div><input type="submit" name="enviar"></div>
     </form>
+    <hr>
+    <% String res = request.getParameter("t") %>
+    <div>
+        Respuesta: <% =res %>
+    </div>
 </body>
 </html>

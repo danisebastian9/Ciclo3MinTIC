@@ -7,22 +7,40 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.sql.rowset.serial.SerialException;
+import javax.swing.JOptionPane;
+
+import org.springframework.stereotype.Controller;
 
 @WebServlet("/Controla")
+@Controller
+
 public class Controla extends HttpServlet {
-    private static final long seralVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
     public Controla() {
         super();
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        int ladoA, ladoB, ladoC;
+        
+        if(request.getParameter("enviar")!= null){
+            int ladoA, ladoB, ladoC;
 
-        ladoA = Integer.parseInt(request.getParameter("ladoA"));
-        ladoB = Integer.parseInt(request.getParameter("ladoB"));
-        ladoC = Integer.parseInt(request.getParameter("ladoC"));
+            String tipo = "";
+            ladoA = Integer.parseInt(request.getParameter("ladoA"));
+            ladoB = Integer.parseInt(request.getParameter("ladoB"));
+            ladoC = Integer.parseInt(request.getParameter("ladoC"));
+            if(ladoA == ladoB && ladoB == ladoC){
+                tipo = "Triangulo Equilatero";
+            } else if(ladoA == ladoB || ladoB == ladoC || ladoA == ladoC){
+                tipo = "Triangulo Isoceles";
+            } else {
+                tipo = "Triangulo Escaleno";
+            }
+            JOptionPane.showMessageDialog(null, tipo);
+
+            response.sendRedirect("index.jsp?t="+ tipo);
+        }
 
     }
 }
