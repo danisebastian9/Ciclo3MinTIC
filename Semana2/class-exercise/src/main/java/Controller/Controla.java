@@ -19,6 +19,10 @@ public class Controla extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int ladoA, ladoB, ladoC;
-        
+
+        ladoA = Integer.parseInt(request.getParameter("ladoA"));
+        ladoB = Integer.parseInt(request.getParameter("ladoB"));
+        ladoC = Integer.parseInt(request.getParameter("ladoC"));
+
     }
 }
