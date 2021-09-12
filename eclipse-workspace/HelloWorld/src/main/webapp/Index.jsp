@@ -9,8 +9,9 @@
 <body>
 <form action="Controla" method="POST">
     <div><label for="">Lado A:</label><input type="number" name="ladoA"></div>
-    <div><label for="">Lado A:</label><input type="number" name="ladoA"></div>
-    <div><label for="">Lado A:</label><input type="number" name="ladoA"></div>
+    <div><label for="">Lado B:</label><input type="number" name="ladoB"></div>
+    <div><label for="">Lado C:</label><input type="number" name="ladoC"></div>
+    <div><input type="submit" name="enviar"></div>
 </form>	
 </form>
 </body>
