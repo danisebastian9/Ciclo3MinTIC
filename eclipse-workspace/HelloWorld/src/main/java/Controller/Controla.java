@@ -37,7 +37,7 @@ public class Controla extends HttpServlet {
 			}
 			JOptionPane.showMessageDialog(null, tipo);
 			
-			response.sendRedirect("Index.jsp");
+			response.sendRedirect("Index.jsp?t=" + tipo);
 		}
 
 	}

@@ -12,6 +12,11 @@
     <div><label for="">Lado B:</label><input type="number" name="ladoB"></div>
     <div><label for="">Lado C:</label><input type="number" name="ladoC"></div>
     <div><input type="submit" name="enviar"></div>
+    <hr>
+    <%
+    String res = request.getParameter("t"); 
+    %>
+    <div> Respuesta: <%=res %> </div>
 </form>	
 </body>
 </html>

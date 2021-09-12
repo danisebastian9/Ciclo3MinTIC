@@ -9,5 +9,10 @@
         <div><label for="">Lado C:</label><input type="number" name="ladoC"></div>
         <input type="submit" name="enviar">
     </form>
+    <hr>
+    <% String res = request.getParameter("t"); %>
+    <div>
+        Respuesta: <% res %>
+    </div>
 </body>
 </html>
