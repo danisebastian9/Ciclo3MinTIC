@@ -13,6 +13,5 @@
     <div><label for="">Lado C:</label><input type="number" name="ladoC"></div>
     <div><input type="submit" name="enviar"></div>
 </form>	
-</form>
 </body>
 </html>

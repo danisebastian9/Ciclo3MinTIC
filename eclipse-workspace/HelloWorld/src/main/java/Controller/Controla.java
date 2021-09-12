@@ -6,6 +6,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.swing.JOptionPane;
 
 /**
  * Servlet implementation class Controla
@@ -14,28 +15,31 @@ import javax.servlet.http.HttpServletResponse;
 public class Controla extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
     public Controla() {
         super();
-        // TODO Auto-generated constructor stub
     }
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
-	}
-
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+		int ladoA, ladoB, ladoC;
+		String tipo = "";
+		
+		if(request.getParameter("enviar")!= null) {
+			ladoA = Integer.parseInt(request.getParameter("ladoA"));
+			ladoB = Integer.parseInt(request.getParameter("ladoB"));
+			ladoC = Integer.parseInt(request.getParameter("ladoC"));
+			
+			if(ladoA == ladoB && ladoB == ladoC) {
+				tipo = "Triangulo Equilatero";
+			} else if(ladoA == ladoB || ladoA == ladoC || ladoB == ladoC) {
+				tipo = "Triangulo Isoceles";
+			} else {
+				tipo = "Triangulo Escaleno";
+			}
+			JOptionPane.showMessageDialog(null, tipo);
+			
+			response.sendRedirect("Index.jsp");
+		}
+
 	}
 
 }
