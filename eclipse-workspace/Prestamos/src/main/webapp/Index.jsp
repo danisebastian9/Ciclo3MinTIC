@@ -5,12 +5,13 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Prestamos</title>
+<title>Prestamo Libros</title>
 </head>
 <body>
-	<% 
+	<!-- <% 
 	Conexion con= new Conexion();
 	con.Conectar();
-	%>
+	%> -->
+	<a href="MenuPrincipal.jsp">Menu Principal</a>
 </body>
 </html>
