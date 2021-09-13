@@ -18,10 +18,40 @@ form {
 
 .labels {
     display: block;
+    font-size: 2vw;
+    margin: 11px;
 }
 
 #fields {
-    border: black solid 1px;
     padding: 30px;
-    border-radius: 5px;
+    border-radius: 15px;
+    box-shadow: 1px 1px 4px #2b2a2a;
+    background: papayawhip;
+
+}
+
+.inputs {
+    border-radius: 20px;
+    height: 30px;
+    width: 35vw;
+    padding: 7px;
+    border: gray;
+    box-shadow: 2px 2px 4px #2b2a2a;
+}
+
+.buttons {
+    padding: 12px;
+    margin-top: 20px;
+    width: 100%;
+    background-color: #7ae67a;
+    border-radius: 9px;
+    border: none;
+    box-shadow: 1px 2px 3px #2b2a2a;
+    color: white;
+    text-shadow: 1px 2px 4px #020202;
+    font-size: 2vw;
+}
+
+#cancel {
+    background-color: dimgray;
 }

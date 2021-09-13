@@ -10,10 +10,10 @@
 <body>
     <form action="Login" method="POST">
         <div id="fields">
-            <div ><label class="labels" for="">User</label><input type="text" name="usuario"></div>
-            <div ><label class="labels" for="">Password</label><input type="password" name="pass"></div>
+            <div ><label class="labels" for="">User</label><input class="inputs" type="text" name="usuario"></div>
+            <div ><label class="labels" for="">Password</label><input class="inputs" type="password" name="pass"></div>
             <div><input class="buttons" type="submit" name="enviar" value="Ingresar"></div>
-            <div><a href="Index.jsp"><input class="buttons" type="button" value="Cancelar"></a></div>
+            <div><a href="Index.jsp"><input id="cancel" class="buttons" type="button" value="Cancelar"></a></div>
         </div>
 
     </form>	
