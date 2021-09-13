@@ -1,0 +1,27 @@
+@charset "ISO-8859-1";
+
+body {
+	background-color: #eee;  
+
+}
+
+form {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+    border-radius: 15px
+}
+
+.labels {
+    display: block;
+}
+
+#fields {
+    border: black solid 1px;
+    padding: 30px;
+    border-radius: 5px;
+}
