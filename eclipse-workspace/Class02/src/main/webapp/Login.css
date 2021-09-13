@@ -2,7 +2,6 @@
 
 body {
 	background-color: #eee;  
-
 }
 
 form {
@@ -13,7 +12,9 @@ form {
     justify-content: center;
     flex-direction: column;
     margin: auto;
-    border-radius: 15px
+    border-radius: 15px;
+    font-family: 'Varela Round', sans-serif;
+    font-weight: bold;
 }
 
 .labels {
@@ -50,6 +51,12 @@ form {
     color: white;
     text-shadow: 1px 2px 4px #020202;
     font-size: 2vw;
+    font-family: 'Varela Round', sans-serif;
+}
+
+.buttons:hover {
+    cursor: pointer;
+    background-color: #7ae67ac0;
 }
 
 #cancel {
