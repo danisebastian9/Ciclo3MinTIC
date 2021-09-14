@@ -7,9 +7,10 @@
 <title>Libros</title>
 </head>
 <body>
+	<%! String mensaje=""; %>
     <h1>Modulo Libros</h1>
     <hr>
-    <form action="libro" method="POST">
+    <form action="Libro" method="POST">
         <div><label for="">Codigo: </label><input type="text" name="isbn"></div>
         <div><label for="">Titulo: </label><input type="text" name="titulo"></div>
         <div><label for="">Editorial: </label><input type="text" name="editorial"></div>
@@ -20,5 +21,10 @@
         <div><input type="submit" name="actualizar" value="Actualizar"></div>
         <div><input type="submit" name="eliminar" value="Eliminar"></div>
     </form>
+    <%
+    if(!mensaje.equals(""))
+    mensaje = request.getParameter("men");
+    %>
+    <h2><%=mensaje %></h2>
 </body>
 </html>
