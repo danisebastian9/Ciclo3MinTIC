@@ -18,3 +18,5 @@ Fecha_Prestamo date
 );
 
 alter table Prestamo add foreign key (libro) references Libro(ISBN);
+
+
