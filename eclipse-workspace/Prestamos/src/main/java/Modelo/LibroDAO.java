@@ -34,6 +34,40 @@ public class LibroDAO {
 		return result;
 	}
 	
+	public LibroDTO Buscar_Libro(String ISBN) {
+		
+		LibroDTO lib = null;
+		try {
+			String sql="SELECT * FROM libro WHERE ISBN = ?";
+			ps = con.prepareStatement(sql);
+			ps.setString(1, ISBN);
+			res = ps.executeQuery();
+			while(res.next()) {
+				lib = new LibroDTO (res.getString(1),res.getString(2),res.getString(3),res.getString(4),res.getInt(5));
+			}
+		} catch(SQLException e) {
+			JOptionPane.showMessageDialog(null, "Error al consultar" + e);
+		}
+		return lib;
+	}
 	
+	
+	public boolean Actualizar_Libro(LibroDTO lib) {
+		boolean result = false;
+		try {
+			String sql="UPDATE libro SET titulo=?, editorial=?, autor=?,No_paginas? where isbn=?";
+			ps = con.prepareStatement(sql);
+			ps.setString(1,lib.getTitulo());
+			ps.setString(2, lib.getEditorial());
+			ps.setString(3, lib.getAutor());
+			ps.setInt(4, lib.getNo_paginas());
+			ps.setString(5, lib.getISBN());
+			result = ps.executeUpdate() > 0 ;
+			
+		} catch(SQLException ex) {
+			JOptionPane.showMessageDialog(null, "Error al Actualizar: " + ex);
+		}
+		return result;
+	}
 	
 	}

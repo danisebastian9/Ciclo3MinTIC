@@ -47,6 +47,40 @@ public class Libro extends HttpServlet {
 				response.sendRedirect("Libros.jsp?men=El libro no se registro.");
 			}
 		}
+		
+		if(request.getParameter("consultar") != null) { //"codigo"
+			String codigo, titulo, editorial, autor;
+			int paginas;
+			
+			codigo = request.getParameter("isbn");
+			LibroDTO lib = libDao.Buscar_Libro(codigo);
+			codigo = lib.getISBN();
+			titulo = lib.getTitulo();
+			editorial = lib.getEditorial();
+			autor = lib.getAutor();
+			paginas = lib.getNo_paginas();
+			
+			response.sendRedirect("Libros.jsp?codigo="+codigo+"&&titulo="+titulo+"&&editorial="+editorial+"&&autor="+autor+"&&paginas="+paginas);
+		}
+		
+		
+		if(request.getParameter("actualizar") != null) {
+			String codIsbn, titulo, editorial, autor;
+			int paginas;
+			
+			codIsbn = request.getParameter("isbn");
+			titulo = request.getParameter("titulo");
+			editorial = request.getParameter("editorial");
+			autor = request.getParameter("autor");
+			paginas = Integer.parseInt(request.getParameter("paginas"));
+			
+			LibroDTO libDto = new LibroDTO(codIsbn, titulo, editorial, autor, paginas);
+			if(libDao.Actualizar_Libro(libDto)) {
+				response.sendRedirect("Libros.jsp?men=Libro se Actualizo Exitosamente.");
+			} else {
+				response.sendRedirect("Libros.jsp?men=El libro no se Modifico.");
+			}
+		}
 	}
 
 }
