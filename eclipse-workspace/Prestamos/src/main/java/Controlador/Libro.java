@@ -68,7 +68,7 @@ public class Libro extends HttpServlet {
 			String codIsbn, titulo, editorial, autor;
 			int paginas;
 			
-			codIsbn = request.getParameter("isbn");
+			codIsbn = request.getParameter("cod");
 			titulo = request.getParameter("titulo");
 			editorial = request.getParameter("editorial");
 			autor = request.getParameter("autor");

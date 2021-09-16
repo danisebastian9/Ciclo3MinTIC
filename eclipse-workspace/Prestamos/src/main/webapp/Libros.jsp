@@ -37,6 +37,7 @@
     %>
     <form action="Libro" method="POST">
         <div><label for="">Codigo: </label><input type="text" name="isbn" value="<%=codigo%>" required <%=estado%>></div>
+        <div><input type="hidden" name="cod" value="<%=codigo%>" required></div>
         <div><label for="">Titulo: </label><input type="text" name="titulo" value="<%=titulo%>"></div>
         <div><label for="">Editorial: </label><input type="text" name="editorial" value="<%=editorial%>"></div>
         <div><label for="">Autor: </label><input type="text" name="autor" value="<%=autor%>"></div>
