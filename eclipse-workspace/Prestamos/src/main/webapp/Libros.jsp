@@ -33,6 +33,7 @@
     	paginas = 0;
     	estado="";
     	mensaje = request.getParameter("men");
+    	out.print("<script>alert('"+mensaje+"')</script>"); // Mensaje con alert de JS
     }
     %>
     <form action="Libro" method="POST">
@@ -43,7 +44,6 @@
         <div><label for="">Autor: </label><input type="text" name="autor" value="<%=autor%>"></div>
         <div><label for="">Paginas: </label><input type="number" name="paginas" value="<%=paginas%>"></div>
         <div><input type="submit" name="registrar" value="Registrar"></div>
-        <div><input type="submit" name="consultar" value="Consultar"></div>
         <div><input type="submit" name="actualizar" value="Actualizar"></div>
         <div><input type="submit" name="eliminar" value="Eliminar"></div>
     </form>
@@ -54,6 +54,5 @@
 	    	<div><input type="submit" name="consultar" value="Consultar"></div>
 	    </fieldset>
     </form>
-    <h2><%=mensaje %></h2>
 </body>
 </html>

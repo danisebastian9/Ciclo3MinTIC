@@ -70,4 +70,17 @@ public class LibroDAO {
 		return result;
 	}
 	
+	
+	public boolean Eliminar_Libro(String isbn) {
+		boolean result = false;
+		try {
+			String sql="DELETE FROM libro WHERE isbn = ?";
+			ps = con.prepareStatement(sql);
+			ps.setString(1,isbn);
+			result = ps.executeUpdate() > 0 ;
+		} catch(SQLException ex) {
+			JOptionPane.showMessageDialog(null, "Error al Eliminar: " + ex);
+		}
+		return result;
+	}
 	}

@@ -54,13 +54,17 @@ public class Libro extends HttpServlet {
 			
 			codigo = request.getParameter("isbn");
 			LibroDTO lib = libDao.Buscar_Libro(codigo);
-			codigo = lib.getISBN();
-			titulo = lib.getTitulo();
-			editorial = lib.getEditorial();
-			autor = lib.getAutor();
-			paginas = lib.getNo_paginas();
-			
-			response.sendRedirect("Libros.jsp?codigo="+codigo+"&&titulo="+titulo+"&&editorial="+editorial+"&&autor="+autor+"&&paginas="+paginas);
+			if(lib != null) {
+				codigo = lib.getISBN();
+				titulo = lib.getTitulo();
+				editorial = lib.getEditorial();
+				autor = lib.getAutor();
+				paginas = lib.getNo_paginas();
+				
+				response.sendRedirect("Libros.jsp?codigo="+codigo+"&&titulo="+titulo+"&&editorial="+editorial+"&&autor="+autor+"&&paginas="+paginas);
+			} else {
+				response.sendRedirect("Libros.jsp?men=El libro no existe");
+			}
 		}
 		
 		
@@ -80,6 +84,25 @@ public class Libro extends HttpServlet {
 			} else {
 				response.sendRedirect("Libros.jsp?men=El libro no se Modifico.");
 			}
+		}
+		
+		
+		if(request.getParameter("eliminar") != null) {
+			String codIsbn;
+			
+			codIsbn = request.getParameter("cod");
+			libDao.Eliminar_Libro("cod");
+			int op = JOptionPane.showConfirmDialog(null, "Desea Eliminar el libro cod: "+ codIsbn);
+			if(op == 0) {
+				if(libDao.Eliminar_Libro(codIsbn)) {
+					response.sendRedirect("Libros.jsp?men=Libro Eliminado.");
+				} else {
+					response.sendRedirect("Libros.jsp?men=El libro no se Elimino.");
+				}
+			} else {
+				response.sendRedirect("Libros.jsp");
+			}
+
 		}
 	}
 
