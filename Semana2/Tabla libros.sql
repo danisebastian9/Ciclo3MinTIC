@@ -32,3 +32,12 @@ select fecha_prestamo+7 from prestamos;
 
 update prestamo set Fecha_Devolucion = Fecha_Prestamo + 7 where Id_prestamos=2;
 
+SELECT Precio_unit FROM libro WHERE ISBN = 'isbn01';
+
+#PRESTAMOS tabla
+SELECT libro,count(libro) from prestamo GROUP BY libro HAVING libro = 'isbn111';
+SELECT count(libro) from prestamo GROUP BY libro HAVING libro = 'isbn111';
+
+UPDATE libro as act SET Acumulado = ((SELECT Precio_unit clientesFROM libro WHERE ISBN = 'isbn111') * (SELECT count(libro) from prestamo GROUP BY libro HAVING libro = 'isbn111')) WHERE ISBN = 'isbn111';
+UPDATE libro SET Acumulado = ?*? WHERE isbn = ?;
+
