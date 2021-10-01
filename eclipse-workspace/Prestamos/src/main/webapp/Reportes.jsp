@@ -9,9 +9,10 @@
 <script src="js/reportes.js"></script>
 </head>
 <body>
-    <div><button class="listaLibros"></button></div>
-    <div><button class=""></button></div>
-    <div><button class=""></button></div>
+    <div><button class="listaLibros">Listar Libros</button></div>
+    <label for="">Mensaje:</label><input type="text" id="mensaje">
+    <div><button class="listarPrestamos"></button>Listar Prestamos</div>
+    <div><button class="totalLibro">Total por Libro</button></div>
 
 </body>
 </html>
